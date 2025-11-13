@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "LinkedIn Feed Filter",
+  "version": "1.0",
+  "host_permissions": ["https://generativelanguage.googleapis.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.linkedin.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
